@@ -1,0 +1,9 @@
+package com.stock.mvc.dao.impl;
+
+import com.stock.mvc.dao.IFournisseurDao;
+
+import com_stock_mvc_entities.Fournisseur;
+
+public class FournisseurDaoImpl extends GenericDaoImpl<Fournisseur> implements IFournisseurDao  {
+
+}
