@@ -1,5 +1,9 @@
 package com.stock.mvc.dao.impl;
 
-public class MvtStckDaoImpl {
+import com.stock.mvc.dao.IMvtStckDao;
+
+import com_stock_mvc_entities.MvtStck;
+
+public class MvtStckDaoImpl extends GenericDaoImpl<MvtStck> implements IMvtStckDao  {
 
 }
