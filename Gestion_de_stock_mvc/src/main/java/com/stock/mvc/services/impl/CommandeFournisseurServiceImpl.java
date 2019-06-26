@@ -2,6 +2,7 @@ package com.stock.mvc.services.impl;
 
 import java.util.List;
 
+import com.stock.mvc.dao.ICommandeFournisseurDao;
 import com.stock.mvc.services.ICommandeFournisseurService;
 
 import com_stock_mvc_entities.Articles;
@@ -9,6 +10,10 @@ import com_stock_mvc_entities.CommandeFournisseur;
 
 public class CommandeFournisseurServiceImpl implements ICommandeFournisseurService {
 
+	private ICommandeFournisseurDao dao;
+	public void setDao(ICommandeFournisseurDao dao) {
+		this.dao=dao;
+	}
 	@Override
 	public CommandeFournisseur save(CommandeFournisseur entity) {
 		// TODO Auto-generated method stub

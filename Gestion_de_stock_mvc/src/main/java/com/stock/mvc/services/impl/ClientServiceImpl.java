@@ -2,11 +2,19 @@ package com.stock.mvc.services.impl;
 
 import java.util.List;
 
+import com.stock.mvc.dao.ICategoryDao;
+import com.stock.mvc.dao.IClientDao;
 import com.stock.mvc.services.IClientService;
 
 import com_stock_mvc_entities.Client;
 
 public class ClientServiceImpl implements IClientService {
+	
+	private IClientDao dao;
+	
+	public void setDao(IClientDao dao) {
+		this.dao=dao;
+	}
 
 	@Override
 	public Client save(Client entity) {

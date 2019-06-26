@@ -2,12 +2,18 @@ package com.stock.mvc.services.impl;
 
 import java.util.List;
 
+import com.stock.mvc.dao.ILigneCommandeClientDao;
 import com.stock.mvc.services.ILigneCommandeClientService;
 
 import com_stock_mvc_entities.LigneCommandeClient;
 
 public class LigneCommandeClientServiceImpl implements ILigneCommandeClientService {
 
+	private ILigneCommandeClientDao dao;
+	public void setDao(ILigneCommandeClientDao dao) {
+		this.dao=dao;
+	}
+	
 	@Override
 	public LigneCommandeClient save(LigneCommandeClient entity) {
 		// TODO Auto-generated method stub

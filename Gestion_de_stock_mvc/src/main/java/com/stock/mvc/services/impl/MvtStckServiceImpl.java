@@ -2,12 +2,19 @@ package com.stock.mvc.services.impl;
 
 import java.util.List;
 
+import com.stock.mvc.dao.IMvtStckDao;
 import com.stock.mvc.services.IMvtStckService;
 
 import com_stock_mvc_entities.MvtStck;
 
 public class MvtStckServiceImpl implements IMvtStckService {
 
+	private IMvtStckDao dao;
+	public void setDao(IMvtStckDao dao) {
+		this.dao=dao;
+	}
+	
+	
 	@Override
 	public MvtStck save(MvtStck entity) {
 		// TODO Auto-generated method stub

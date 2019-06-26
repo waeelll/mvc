@@ -2,12 +2,19 @@ package com.stock.mvc.services.impl;
 
 import java.util.List;
 
+import com.stock.mvc.dao.ILigneCommandeFournisseurDao;
 import com.stock.mvc.services.ILigneCommandeFournisseurService;
 
 import com_stock_mvc_entities.LigneCommandeFournisseur;
 
 public class LigneCommandeFournisseurServiceImpl implements ILigneCommandeFournisseurService {
 
+	private ILigneCommandeFournisseurDao dao;
+	public void setDao(ILigneCommandeFournisseurDao dao) {
+		this.dao=dao;
+	}
+	
+	
 	@Override
 	public LigneCommandeFournisseur save(LigneCommandeFournisseur entity) {
 		// TODO Auto-generated method stub

@@ -2,12 +2,18 @@ package com.stock.mvc.services.impl;
 
 import java.util.List;
 
+import com.stock.mvc.dao.IUtilisateurDao;
 import com.stock.mvc.services.IUtilisateurService;
 
 import com_stock_mvc_entities.Utilisateur;
 
 public class UtilisateurServiceImpl implements IUtilisateurService{
 
+	private IUtilisateurDao dao;
+	public void setDao(IUtilisateurDao dao) {
+		this.dao=dao;
+	}
+	
 	@Override
 	public Utilisateur save(Utilisateur entity) {
 		// TODO Auto-generated method stub

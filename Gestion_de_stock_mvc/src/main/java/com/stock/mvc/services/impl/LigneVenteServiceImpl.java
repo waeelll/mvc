@@ -2,12 +2,20 @@ package com.stock.mvc.services.impl;
 
 import java.util.List;
 
+import com.stock.mvc.dao.ILigneVenteDao;
 import com.stock.mvc.services.ILigneVenteService;
 
 import com_stock_mvc_entities.LigneVente;
 
 public class LigneVenteServiceImpl implements ILigneVenteService {
-
+	
+	
+	private ILigneVenteDao dao;
+	
+	public void setDao(ILigneVenteDao dao) {
+		this.dao=dao;
+	}
+	
 	@Override
 	public LigneVente save(LigneVente entity) {
 		// TODO Auto-generated method stub

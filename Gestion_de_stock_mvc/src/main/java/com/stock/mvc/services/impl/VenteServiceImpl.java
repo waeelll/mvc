@@ -2,6 +2,7 @@ package com.stock.mvc.services.impl;
 
 import java.util.List;
 
+import com.stock.mvc.dao.IVenteDao;
 import com.stock.mvc.services.IVenteService;
 
 import com_stock_mvc_entities.Articles;
@@ -9,6 +10,13 @@ import com_stock_mvc_entities.Vente;
 
 public class VenteServiceImpl implements IVenteService {
 
+	private IVenteDao dao;
+	
+	
+	public void setDao(IVenteDao dao) {
+		this.dao=dao;
+	}
+	
 	@Override
 	public Vente save(Vente entity) {
 		// TODO Auto-generated method stub

@@ -2,12 +2,18 @@ package com.stock.mvc.services.impl;
 
 import java.util.List;
 
+import com.stock.mvc.dao.IFournisseurDao;
 import com.stock.mvc.services.IFournisseurService;
 
 import com_stock_mvc_entities.Fournisseur;
 
 public class FournisseurServiceImpl implements IFournisseurService{
 
+	private IFournisseurDao dao;
+	public void setDao(IFournisseurDao dao) {
+		this.dao=dao;
+	}
+	
 	@Override
 	public Fournisseur save(Fournisseur entity) {
 		// TODO Auto-generated method stub
